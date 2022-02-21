@@ -1,0 +1,41 @@
+version: '3.8'
+networks:
+  api:
+services:
+  db: # database
+    env_file: .env
+    image: postgres
+    networks:
+      - api
+  web: # rails json api
+    container_name: web
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    env_file: .env
+    environment:
+      RAILS_ENV: development
+      RAILS_MAX_THREADS: 5
+    networks:
+      - api
+  app: # react app
+    build: 
+      dockerfile: Dockerfile
+      context: ./boards-app
+    image: node:10-alpine
+    volumes:
+      - /app/node_modules
+      - ./boards-app:/app
+    ports: 
+      - "3001:3001"
+    depends_on:
+      - web
+    networks:
+      - api
+volumes:
+  postgres:

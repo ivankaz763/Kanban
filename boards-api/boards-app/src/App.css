@@ -1,0 +1,112 @@
+
+.removeItemButton {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 0;
+  padding: 20px 7px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+.moveItemButton {
+  color: #bfdbf7;
+  font-size: 16px;
+  line-height: 0;
+  margin-right: 7px;
+  cursor: pointer;
+}
+.board {
+  font-family: sans-serif;
+  white-space: nowrap;
+}
+.board-col {
+  display: inline-block;
+  vertical-align: top;
+  width: 225px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-right: 20px;
+  background: #465362;
+  
+  color: #bfdbf7;
+}
+.board-col-name {
+  font-size: 18px;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+.board-col-item {
+  padding: 15px;
+  background: #011936;
+  color: #f4fffd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+.board-col-item:active {
+  cursor: grabbing;
+}
+.newColumn {
+  display: block;
+  background: #011936;
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  position: relative;
+  font-size: 26px;
+  color: #f4fffd;
+}
+
+.newCard {
+  display: block;
+  background: #f4fffd;
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  font-size: 20px;
+  padding: 0px;
+  margin-bottom: 5px;
+  opacity: 0.7;
+}
+
+.mainContainer {
+  width: 35%;
+  height: 500px;
+  position: relative;
+  border-radius: 7px;
+  margin: 0 auto;
+}
+
+.wrapItems {
+  position: absolute;
+  bottom: 55px;
+  top: 170px;
+  right: 0;
+  left: 0;
+  overflow: auto;
+}
+
+.topHeading {
+  color: rgb(48, 2, 2);
+  font-family: sans-serif;
+  padding: 7px;
+  text-align: center;
+}
+
+ul.listItems {
+  padding: 0 30px;
+}
+
+li.item {
+  font-family: "Times New Roman", Times, serif;
+  list-style-type: none;
+  font-size: 1.5em;
+  border-bottom: 2px solid rgba(80, 2, 90, 0.411);
+  padding: 5px 0;
+}
+
+li.item:hover .removeItemButton {
+  opacity: 2;
+  visibility: visible;
+}
+

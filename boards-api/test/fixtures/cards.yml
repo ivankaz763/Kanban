@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: one
+  position: 0
+  board_column: first
+
+two:
+  title: two
+  position: 1
+  board_column: first
+
+three:
+  title: three
+  position: 0
+  board_column: second
+
+four:
+  title: four
+  position: 1
+  board_column: second
+
+five:
+  title: five
+  position: 0
+  board_column: third
+
+six:
+  title: six
+  position: 1
+  board_column: third
